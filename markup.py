@@ -6,8 +6,19 @@ from aiogram.utils.callback_data import CallbackData
 
 from models import CounterInfo
 
+BEGIN_TEXT = "Почати"
+
 counter_callback_data = CallbackData('counter', 'uuid')
 delete_counter_callback_data = CallbackData('delete-counter', 'uuid')
+
+
+
+
+def create_start_markup():
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    start_button = types.KeyboardButton(BEGIN_TEXT)
+    markup.add(*[start_button])
+    return markup
 
 def create_main_markup():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=3)

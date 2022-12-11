@@ -1,0 +1,2 @@
+class PowerBotException(Exception):
+    pass

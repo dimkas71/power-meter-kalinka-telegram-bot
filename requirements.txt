@@ -1,0 +1,6 @@
+pytest
+aiogram
+python-dotenv
+aiosqlite
+dataclasses-json
+flask

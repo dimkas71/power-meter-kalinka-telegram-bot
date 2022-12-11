@@ -1,9 +1,8 @@
+from dataclasses import dataclass
+from datetime import date
 from uuid import UUID
-from dataclasses import dataclass, field
+
 from dataclasses_json import dataclass_json, Undefined
-from datetime import date 
-from typing import List, Optional 
-import json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -1,12 +1,13 @@
 import logging
+
 from aiogram.utils.executor import start_polling
 
-from loader import dp,bot
-from handlers import default_msg_handler
+from loader import dp
 
 
 async def on_startup(app):
     pass
+
 
 async def on_shutdown(app):
     logging.warning("Shutting down...")
@@ -16,11 +17,11 @@ async def on_shutdown(app):
 
     logging.warning("Bye....")
 
+
 if __name__ == '__main__':
     start_polling(
-            dp,
-            on_startup=on_startup,
-            on_shutdown=on_shutdown,
-            skip_updates=True
-        )
-
+        dp,
+        on_startup=on_startup,
+        on_shutdown=on_shutdown,
+        skip_updates=True
+    )

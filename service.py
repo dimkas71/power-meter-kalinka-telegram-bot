@@ -1,14 +1,12 @@
-import asyncio
-import logging
 import os
-from urllib import response
+from typing import List
+from uuid import UUID
 
 from aiohttp import ClientSession, BasicAuth
-from typing import List
+
 from exceptions import PowerBotException
 from models import CounterInfo, HistoryCounterValue
 
-from uuid import UUID
 
 async def search_by_number(counter_number: str) -> List[CounterInfo]:
 

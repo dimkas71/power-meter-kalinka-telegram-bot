@@ -1,9 +1,7 @@
-import logging
 import asyncio
+import logging
 import ssl
 import sys
-
-from aiohttp import web
 
 import aiogram
 from aiogram import Bot, types
@@ -12,6 +10,7 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.dispatcher.webhook import get_new_configured_app, SendMessage
 from aiogram.types import ChatType, ParseMode, ContentTypes
 from aiogram.utils.markdown import hbold, bold, text, link
+from aiohttp import web
 
 TOKEN = '5208037729:AAF8rH7kIZkOKaej-M7tnzvKvFR8CEBQ_Z8'
 

@@ -1,16 +1,13 @@
+import logging
 import os
 import ssl
-import logging
-from aiohttp import web
-from aiogram.dispatcher.webhook import get_new_configured_app
-from aiogram.utils.executor import start_webhook
 
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
+from aiogram.dispatcher.webhook import get_new_configured_app
+from aiohttp import web
 
-from loader import dp,bot
-from handlers import default_msg_handler
 import handlers
-
+from loader import dp, bot
 
 # webhook settings
 WEBHOOK_HOST = os.environ.get('WEBHOOK_HOST')

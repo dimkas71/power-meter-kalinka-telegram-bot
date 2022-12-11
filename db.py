@@ -1,11 +1,11 @@
-import aiosqlite
 import os
-import logging
-
 from typing import List, Tuple
 from uuid import UUID
 
+import aiosqlite
+
 from exceptions import PowerBotException
+
 
 async def add_counter_with_user(
                                 user_id: str,

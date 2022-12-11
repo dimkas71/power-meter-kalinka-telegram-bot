@@ -1,27 +1,23 @@
 import logging
+from typing import List, Tuple
 from uuid import UUID
 
 import aiogram.utils.markdown as md
-from exceptions import PowerBotException
-import service
-import db
-
-from utils import enter_counter_info_message, enter_contract_info_message
-from models import CounterInfo
-
-from typing import Counter, List, Tuple
-
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text
-from aiogram.utils.callback_data import CallbackData
 from aiogram.dispatcher.filters.state import StatesGroup, State
 
-
+import db
+import service
+from exceptions import PowerBotException
 from loader import dp
+from markup import create_add_power_meter_markup, create_main_markup, create_inline_counter_markup, \
+    create_add_power_meter_value_markup, \
+    delete_power_meter_markup
+from models import CounterInfo
+from utils import enter_counter_info_message, enter_contract_info_message
 
-from markup import create_add_power_meter_markup, create_main_markup, create_inline_counter_markup, create_add_power_meter_value_markup, \
-            delete_power_meter_markup
 
 #TODO: change the class name to more adequate
 class FSM(StatesGroup):

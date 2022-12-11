@@ -1,8 +1,8 @@
-import os
 import logging
-import dotenv
+import os
 
-from aiogram import Bot, Dispatcher, types
+import dotenv
+from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 logging.basicConfig(level=logging.INFO)

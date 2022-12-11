@@ -1,9 +1,8 @@
-import aiogram.utils.markdown as md
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram import types
-from aiogram.utils.callback_data import CallbackData
-
 from typing import List, Tuple
+
+from aiogram import types
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.utils.callback_data import CallbackData
 
 from models import CounterInfo
 
